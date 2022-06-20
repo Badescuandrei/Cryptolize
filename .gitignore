@@ -28,4 +28,4 @@ doc/api/
 
 # Android stuff
 android/local.properties
-andoid/.gradle/**
+android/.gradle

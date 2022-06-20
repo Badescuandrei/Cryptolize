@@ -32,9 +32,20 @@ class _HomeState extends State<Home> {
     coinList = [];
     var apiKey = dotenv.env['NOMICS_API_KEY'];
     final response = await http.get(
-      Uri.parse(
-          'https://api.nomics.com/v1/currencies/ticker?key=$apiKey&interval=1d&convert=EUR&per-page=100&page=1'),
+      Uri(
+        scheme: "https",
+        host: "api.nomics.com",
+        path: "v1/currencies/ticker",
+        queryParameters: {
+          "key": apiKey,
+          "interval": "1d",
+          "convert": "EUR",
+          "per-page": "100",
+          "page": "1",
+        },
+      ),
     );
+
     if (response.statusCode == 200) {
       List<dynamic> values = [];
       values = json.decode(response.body);
