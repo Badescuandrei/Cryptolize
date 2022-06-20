@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
     var apiKey = dotenv.env['NOMICS_API_KEY'];
     final response = await http.get(
       Uri.parse(
-          'https://api.nomics.com/v1/currencies/ticker?key=$apiKey&ids=BTC,ETH,XRP&interval=1d&convert=EUR&platform-currency=ETH&per-page=100&page=1'),
+          'https://api.nomics.com/v1/currencies/ticker?key=$apiKey&interval=1d&convert=EUR&per-page=100&page=1'),
     );
     if (response.statusCode == 200) {
       List<dynamic> values = [];
