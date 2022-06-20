@@ -25,5 +25,7 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+# Android stuff
 android/local.properties
 android/.gradle
