@@ -45,13 +45,7 @@ class _HomeState extends State<Home> {
         },
       ),
     );
-    /*
-    httpsUri = Uri(
-    scheme: 'https',
-    host: 'example.com',
-    path: '/page/',
-    queryParameters: {'search': 'blue', 'limit': '10'});
-    */
+
     if (response.statusCode == 200) {
       List<dynamic> values = [];
       values = json.decode(response.body);
